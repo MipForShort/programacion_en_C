@@ -7,7 +7,7 @@
  *******************************************************/
 
 /* Include */
-#include <stdio.h>
+include <stdio.h>
 
 /* Creacion de la funcion main, puede dar advertencia el tipo void */
 void main()
