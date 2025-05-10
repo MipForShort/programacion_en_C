@@ -1,6 +1,6 @@
 /*****************************************************************
  *
- * FICHERO: wc.c
+ * FICHERO: Ej-5.c
  *
  * CONTENIDO: Lee caracteres y cuenta cuantos ha leido,
  *            cuantas lineas y palabras habian.
@@ -24,16 +24,16 @@
  #include <stdio.h>
 
  enum ESTADO {VIENDO_PALABRA, VIENDO_SEPARADOR};
- 
+
  int main(void)
  {
      char car;
      enum ESTADO estado = VIENDO_SEPARADOR;
- 
+
      int total_caracteres = 0;
      int total_palabras = 0;
      int total_lineas = 0;
- 
+
  /********************************************************************
   * con scanf se lee un caracter: car
   *
@@ -41,11 +41,11 @@
   * Si scanf devuelve EOF es que no se leyo nada, por ello se intenta
   * leer un caracter y si no es EOF, entro en bucle
   ********************************************************************/
- 
+
      while (scanf("%c", &car) != EOF)
      {
          total_caracteres++;
- 
+
          switch(car)
          {
              case '\n':
@@ -64,8 +64,8 @@
                  break;
          }
      }
- 
+
      printf("c = %d\nw = %d\nl = %d\n", total_caracteres, total_palabras, total_lineas);
- 
+
      return 0;
  }

@@ -1,6 +1,6 @@
 /***********************************************************************
  *
- * FICHERO: b10aN.c
+ * FICHERO: Ej-3.c
  *
  * CONTENIDO: Realiza la conversion de un entero dado (positivo)
  *            expresado en 10 a una base destino de 2 a 10.
@@ -24,32 +24,32 @@
      int resultado;
      int resto;
      int peso;
- 
+
      printf("Numero y base: ?\n");
      scanf("%d %d", &numero, &base);
- 
+
      if (base < 2 || base > 10)
      {
          printf("La base no es correcta\n");
          return 1;
      }
- 
+
      peso = 1;
      resultado = 0;
- 
+
      do
      {
          resto = numero % base;
- 
+
          numero = numero / base;
- 
+
          resultado = resultado + (resto * peso);
- 
+
          peso = peso * 10;
      }
      while (numero != 0);
- 
+
      printf("Resultado = %d\n", resultado);
- 
+
      return 0;
  }
